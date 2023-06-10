@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use DateTime;
 
-class CustomerTableSeeder extends Seeder
+class CustomersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -22,6 +22,6 @@ class CustomerTableSeeder extends Seeder
             ]
         ];
 
-        DB::table('customer')->insert($customers);
+        DB::table('customers')->insert($customers);
     }
 }
