@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CustomersTableSeeder::class,
             ShopsTableSeeder::class,
+            FormSettingsTableSeeder::class,
             ProductsTableSeeder::class,
         ]);
     }
