@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('deliveries', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('order_id')->constrained(
-                table: 'orders', indexName: 'order_id'
-            );
+            $table->bigInteger('order_id');
             $table->timestamp('delivery_date');
             $table->timestamps();
         });
