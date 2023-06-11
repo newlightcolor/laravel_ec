@@ -5,7 +5,7 @@
     <link href="css/product_for_customer/detail.css" rel="stylesheet">
 @endpush
 @push('script')
-    <link href="js/product_for_customer/detail.js" rel="stylesheet">
+    <script src="js/product_for_customer/detail.js"></script>
 @endpush
  
 @section('header')
