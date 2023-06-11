@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('form_settings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('shop_id')->constrained(
-                table: 'shops', indexName: 'shop_id'
-            );
+            $table->bigInteger('shop_id');
             $table->string('form_name', 50);
             $table->integer('option_display_count')->default(5);
             $table->integer('min_delivery_date_offset')->default(3);
