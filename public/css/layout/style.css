@@ -1,0 +1,15 @@
+body {
+  color: #444;
+}
+
+header {
+  padding: 5px 100px;
+  text-align: left;
+  background-color: #444;
+  color: #fff;
+}
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=style.css.map */
