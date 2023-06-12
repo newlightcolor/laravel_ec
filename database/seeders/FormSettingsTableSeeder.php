@@ -21,7 +21,7 @@ class FormSettingsTableSeeder extends Seeder
                 'form_name' => 'order',
                 'option_display_count' => 5,
                 'min_delivery_date_offset' => 3,
-                'countries_shift_min_delivery_date_offset' => 'a:2:{s:9:"北海道";i:2;s:9:"沖縄県";i:3;}',
+                'prefectures_shift_min_delivery_date_offset' => 'a:2:{s:9:"北海道";i:2;s:9:"沖縄県";i:3;}',
                 'shift_min_delivery_date_offset_after_3pm' => 1,
                 'saturday_delivery_disabled' => 1,
                 'sunday_delivery_disabled' => 1,
