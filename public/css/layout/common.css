@@ -12,4 +12,9 @@ header {
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+#modal-loading .modal-content {
+  text-align: center;
+  padding: 20px;
+}/*# sourceMappingURL=common.css.map */

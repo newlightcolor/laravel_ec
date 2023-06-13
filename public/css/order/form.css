@@ -1,0 +1,11 @@
+#form-order .form-bottom {
+  margin-top: 10px;
+}
+#form-order #btn-order {
+  width: 150px;
+  color: #FFF;
+  background-color: #FFA500;
+}
+#form-order #btn-order:hover {
+  background-color: #FF8C00;
+}/*# sourceMappingURL=form.css.map */

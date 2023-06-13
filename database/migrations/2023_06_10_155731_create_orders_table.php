@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('customer_id');
+            $table->string('postcode', 10);
+            $table->string('prefecture', 30);
+            $table->string('municipality', 30);
+            $table->string('address', 30);
+            $table->string('building', 100)->nullable();
+            $table->date('delivery_date');
             $table->timestamps();
         });
     }

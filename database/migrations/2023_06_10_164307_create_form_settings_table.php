@@ -16,9 +16,9 @@ return new class extends Migration
             $table->bigInteger('shop_id');
             $table->string('form_name', 50);
             $table->integer('option_display_count')->default(5);
-            $table->integer('min_delivery_date_offset')->default(3);
-            $table->binary('prefectures_shift_min_delivery_date_offset')->nullable(true);
-            $table->boolean('shift_min_delivery_date_offset_after_3pm')->default(0);
+            $table->integer('delivery_offset')->default(3);
+            $table->binary('prefectures_shift_delivery_offset')->nullable(true);
+            $table->boolean('shift_delivery_offset_after_3pm')->default(0);
             $table->boolean('saturday_delivery_disabled')->default(0);
             $table->boolean('sunday_delivery_disabled')->default(0);
             $table->timestamps();

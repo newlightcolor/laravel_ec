@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductForCustomerController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +15,7 @@ use App\Http\Controllers\ProductForCustomerController;
 |
 */
 
-Route::get('/', [ProductForCustomerController::class, 'detail']);
+Route::get('/', [ProductController::class, 'show']);
+Route::get('/product', [ProductController::class, 'show']);
+Route::get('/order/create', [OrderController::class, 'create']);
+Route::post('/order', [OrderController::class, 'store'])->middleware('auth.customer');

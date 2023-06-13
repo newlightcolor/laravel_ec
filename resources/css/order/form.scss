@@ -1,0 +1,13 @@
+#form-order {
+    .form-bottom {
+        margin-top: 10px;
+    }
+    #btn-order {
+        width: 150px;
+        color: #FFF;
+        background-color: #FFA500;
+        &:hover {
+            background-color: #FF8C00;
+        }
+    }
+}
