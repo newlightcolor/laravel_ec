@@ -59,7 +59,7 @@ final class OrderForm
         $this->input['delivery_date'] = $request->input('delivery_date');
 
         //フォームの既定値
-        $this->default['delivery_dates'] = $this->getEnableDeliveryDates();
+        $this->default['delivery_date'] = $this->getEnableDeliveryDates();
     }
 
     /**
@@ -85,11 +85,16 @@ final class OrderForm
     /**
      * フォーム既定値 $this->defaultを取得
      */
-    public function default($key)
+    public function default($key = null)
     {
-        return array_key_exists($key, $this->default)
-                    ? $this->default[$key]
-                    : null;
+        if(isset($key) === false) {
+            return $this->default;
+        }
+        else{
+            return array_key_exists($key, $this->default)
+                        ? $this->default[$key]
+                        : null;
+        }
     }
 
     /**

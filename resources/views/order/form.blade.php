@@ -10,7 +10,7 @@
                 <label for="delivery-date" class="form-label">配送日</label>
                 <select name="delivery_date" class="form-select" id="delivery-date">
                     <option value>選択してください</option>
-                    @foreach($OrderForm->default("delivery_dates") as $delivery_date)
+                    @foreach($OrderForm->default("delivery_date") as $delivery_date)
                     <option value="{{ $delivery_date['value'] }}" 
                             @if($OrderForm->input('delivery_date') === $delivery_date['value']) selected @endif>
                         {{ $delivery_date['display'] }}

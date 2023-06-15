@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api;
+use App\Models\Product;
+use App\Services\Form\OrderForm;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/product', function (Request $request) {
+    return Product::first();
+});
+Route::get('/order_form', function (Request $request) {
+    $OrderForm = new OrderForm($request);
+    return response()->json(['options'=>$OrderForm->default()]);
+});
+Route::post('/order', [Api\OrderController::class, 'store'])->middleware('auth.customer');
+Route::post('/test', function() {
+    return response()->json(['message' => '注文が完了しました。']);
 });

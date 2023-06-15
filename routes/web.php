@@ -15,7 +15,7 @@ use App\Http\Controllers\OrderController;
 |
 */
 
-Route::get('/', [ProductController::class, 'show']);
+Route::get('/', function(){ return view('app'); });
 Route::get('/product', [ProductController::class, 'show']);
 Route::get('/order/create', [OrderController::class, 'create']);
 Route::post('/order', [OrderController::class, 'store'])->middleware('auth.customer');
