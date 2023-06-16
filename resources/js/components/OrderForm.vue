@@ -232,7 +232,7 @@ function showError(errorMessages = []){
     errorAlert.value.show()
 }
 function hideError(){
-    orderForm.errors = []
+    errorAlert.value.hide()
 }
 
 /**

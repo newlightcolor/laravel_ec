@@ -19,12 +19,16 @@ const errorMessages = ref([])
 function show() {
     display.value = true
 }
+function hide() {
+    display.value = false
+}
 function setErrorMessage(useErrorMessages = []) {
     errorMessages.value = useErrorMessages
 }
 
 defineExpose({
     show,
+    hide,
     setErrorMessage
 })
 </script>
